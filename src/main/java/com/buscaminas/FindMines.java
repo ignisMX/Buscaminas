@@ -15,37 +15,37 @@ public class FindMines {
         for(int i = 0; i < row; i ++){
             for(int j = 0; j < column; j ++){
                 int counter = 0;
-                if(collection[i][j] == "."){
+                if(collection[i][j].equals(".")){
                    
                     //Accede a todos los de la fila previa
                     if(i -1 > -1){
-                        if(collection[i-1][j] == "*") counter ++;
+                        if(collection[i-1][j].equals("*")) counter ++;
                         if(j - 1 > -1){
-                            if(collection[i-1][j-1] == "*") counter ++;
+                            if(collection[i-1][j-1].equals("*")) counter ++;
                         }
                         if(j + 1 < column){
-                            if(collection[i-1][j+1] == "*") counter ++;
+                            if(collection[i-1][j+1].equals("*")) counter ++;
                         }
                     }
                     
                     //accede a todos los de la siguiente fila
                     if(i + 1 < row){
-                        if(collection[i+1][j] == "*") counter ++;
+                        if(collection[i+1][j].equals("*")) counter ++;
                         if(j - 1 > -1){
-                            if(collection[i+1][j-1] == "*") counter ++;
+                            if(collection[i+1][j-1].equals("*")) counter ++;
                         }
                         if(j + 1 < column){
-                            if(collection[i+1][j+1] == "*") counter ++;
+                            if(collection[i+1][j+1].equals("*")) counter ++;
                         }
                     }
                     
                     //accede a los laterales
                     if( j +1 < column){
-                        if(collection[i][j+1] == "*") counter ++;
+                        if(collection[i][j+1].equals("*")) counter ++;
                     }
                     
                     if( j - 1 > -1){
-                        if(collection[i][j-1] == "*") counter ++;
+                        if(collection[i][j-1].equals("*")) counter ++;
                     }
                     
                     collection[i][j] = String.valueOf(counter);

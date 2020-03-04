@@ -46,12 +46,14 @@ public class ReadFile {
         return FindMines.find(mines, rows, columns);
     }
     
-//    public static void runMines(String Path){
-//        String [][] result = read(Path);
-//        
-//        for(int i = 0; i < row; i ++){
-//            for(int j = 0; j < column; j ++){
-//            }
-//        }
-//    }
+    public static void runMines(String Path){
+        String [][] result = read(Path);
+        
+        for(int i = 0; i < result.length; i ++){
+            for(int j = 0; j < result[i].length; j ++){
+                System.out.print(result[i][j]);
+            }
+            System.out.println("");
+        }
+    }
 }

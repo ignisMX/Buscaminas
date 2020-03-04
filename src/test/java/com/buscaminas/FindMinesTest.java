@@ -14,9 +14,9 @@ import com.buscaminas.FindMines;
  * @author ignis
  */
 public class FindMinesTest {
-    
+    private static final String PATH = "src/test/resources/input.txt";
     @Test
-    public void testReadDataFromBarcode(){
+    public void testFindMines(){
         
         String [][]testOne = {
                         {"*",".",".","."},
@@ -42,5 +42,11 @@ public class FindMinesTest {
         assertEquals("1", result[3][1]);
         assertEquals("1", result[3][2]);
         assertEquals("0", result[3][3]);
+    }
+    
+        @Test
+    public void testReadFileAndFindMines(){
+        
+        ReadFile.read(PATH);
     }
 }
